@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Cover Template · Bootstrap v5.3</title>
+
+<link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    @media (max-width:769px){
+    #mobile{width:100%; height:100vh;}
+    #tablet{display:none;}
+    #pc{display:none;}
+    }
+    
+    /* tablet size */
+    @media (min-width:770px) and (max-width:1499px){
+    #tablet{width:100%; height:100vh;}
+    #mobile{display:none;}
+    #pc{display:none;}
+    }
+
+    /* mobile size */
+    @media (min-width:1500px){
+    #pc{width:100%; height:100vh;}
+    #tablet{display:none;}
+    #mobile{display:none;}
+    }
+      .carousel-item {
+        height: 52rem;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .image-preview {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 2000px;
+            margin: 0 auto;
+        }
+
+        .prev-image,
+        .next-image {
+            height: 200px;
+            width: auto;
+            opacity: 0.3;
+        }
+
+        .current-image {
+            height: 450px;
+            width: auto;
+            margin: 0 10px;
+        }
+
+        .prev-button, .next-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 30px;
+            color: #555;
+        }
+        .parent{
+          width: 90%;
+          margin: 10px auto;
+          }
+
+        .first {
+ 
+            float: left;
+            width:25%;
+
+            margin-left: 9.5%;
+        }
+
+        .second{
+      
+            float: left;
+            width:25%;
+     
+        }
+
+        .third{
+  
+            float: left;
+            width:25%;
+      
+        }
+        .img-shadow {
+			box-shadow: 0px 0px 0px #ede4e4;
+      padding: 25px;
+			transition: box-shadow 0.1s ease-in-out;
+		}
+
+		.img-shadow:hover {
+			box-shadow: 10px 10px 20px #ede4e4;
+		}
+
+    #box {
+  width: 45%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 100px auto;
+  transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#box:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: translateY(-10px);
+}
+
+#box * {
+  padding: 10px;
+  
+}
+
+#box .img {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+#box .heading {
+  font-size: 28px;
+}
+
+#box .data {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #666;
+}
+
+#box .data span {
+  padding: 0;
+}
+
+#box .data .date {
+  margin-bottom: 2px;
+}
+
+#box .data .user-id {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+
+#box .texts {
+  font-size: 14px;
+  line-height: 18px;
+}
+.container_m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  padding: 1rem;
+  color: white;
+  background: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.m_slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.m_mySlides {
+  display: none;
+}
+
+.m_prev{
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  left: 10%;
+  width: auto;
+  margin-top: -22px;
+  padding: px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+}
+
+.m_next {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  margin-right: 10%;
+  width: auto;
+  margin-top: -22px;
+  padding: px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+}
+
+.m_next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+
+
+.m_active, .m_dot:hover {
+  background-color: #717171;
+}
+
+.m_fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+    
+  </head>
+  <body class="text-center">
+    <div id ="pc">
+    <main>
+      <h1 class="visually-hidden">Headers examples</h1>
+    
+      <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" ><img src="./NESTREE_files/nestree-logo.png">
+          </a>
+          <ul class="nav">
+            <li class="nav-item"><a href="#PC_HOME" class="nav-link" style="color: black;"><strong>HOME</strong></a></li>
+            <li class="nav-item"><a href="#PC_SERVICE" class="nav-link" style="color: black;"><strong>SERVICE</strong></a></li>
+            <li class="nav-item"><a href="#PC_PORT" class="nav-link" style="color: black;"><strong>PORTFOLIO</strong></a></li>
+            <li class="nav-item"><a href="#PC_PROCESS" class="nav-link" style="color: black;"><strong>PROCESS</strong></a></li>
+          </ul>
+        </header>
+      </div>
+    </main>
+
+    <svg width="100%" height="1084">
+        <rect width="100%" height="100%" fill="#eee"/>
+        <text x="50%" y="50%" fill="#aaa">영상 또는 메인 이미지 </text>
+    </svg>
+
+      <div id="PC_SERVICE" style="background-color: white;">
+        <img src="./NESTREE_files/service/SERVICE.png" style="margin-top: 8%;">
+        <div style="margin-top: 2%;">
+          <b>네스트리</b>는 최적화된 프로세스로 메타버스 가상공간을 디자인하며 디자인/기획/개발
+        </div>
+        <div>각 분야의 전문인력으로 구성하여 <strong>최상의 솔루션</strong>을 제공합니다</div>
+        <div class="row featurette" style="margin-top: 5%; margin-bottom: 8%;">
+          <div class="parent">
+            <div class="first" style="margin-right: 3%;">
+              <img src="./NESTREE_files/service/branding.png" style="height: 100px;">
+              <div style="margin-top: 5%;">메타버스 브랜딩은 <b style="color: #0257a3;">차별화</b>가 필요합니다.</div>
+              <div style="margin-top: 2%;">네스트리 브랜드에 새로운 세계관을 부여함으로써</div>
+              <div style="margin-top: 2%;">가상공간에서 고객사의 <b style="color: #0257a3;">가치를 증명</b>합니다.</div>
+            </div>
+            <div class="second">
+              <img src="./NESTREE_files/service/design.png" style="height: 100px;">
+              <div style="margin-top: 5%;">다양한 분야의 전문가들의</div>
+              <div style="margin-top: 2%;"><b style="color: #0257a3;">다양한 플렛폼</b>을 활용하여 2D/2.5D/3D 공간을 높은</div>
+              <div style="margin-top: 2%;">퀄리티로 구축합니다.</div>
+            </div>
+            <div class="third" style="margin-left: 3%;">
+              <img src="./NESTREE_files/service/solutions.png" style="height: 100px; ">
+              <div style="margin-top: 5%;">수많은 경험을 바탕으로 사용자가</div>
+              <div style="margin-top: 2%;">메타버스 콘텐츠 및 가상공간을 경험할 수</div>
+              <div style="margin-top: 2%;">있도록 <b style="color: #0257a3;">알맞은 방향</b>을 제시합니다.</div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+        <div id="PC_PORT" style="background-color: #EEE;padding-bottom: 8%;" >
+          <img src="./NESTREE_files/03portfolio/PORTFOLIO.png" style="margin-top: 8%;">
+          <div class="image-preview" style="margin-top: 5%;">
+            <a href="/NESTREE_files/Kvillage.png">
+              <img src="/NESTREE_files/Kvillage.png" alt="previous image" class="prev-image">
+          </a>
+          <button class="prev-button">&#10094;</button>
+          <a href="/NESTREE_files/Anicube.png">
+              <img src="/NESTREE_files/Anicube.png" alt="current image" class="current-image">
+          </a>
+          <button class="next-button">&#10095;</button>
+          <a href="/NESTREE_files/Kvillage.png">
+              <img src="/NESTREE_files/Kvillage.png" alt="next image" class="next-image">
+          </a>
+          </div>
+        </div>
+      <div id="PC_PROCESS" style="padding-bottom: 8%;">
+        <div>
+          <img src="./NESTREE_files/04process/PROCESS.png" style="margin-top: 8%;">
+        </div>
+        <div style="margin-top: 5%;">
+        <img class="img-shadow" src="./NESTREE_files/04process/Group 4.png">
+        <img class="img-shadow" src="./NESTREE_files/04process/Group 5.png">
+        <img class="img-shadow" src="./NESTREE_files/04process/Group 6.png">
+        </div>
+      </div>
+      <div id="5" style="background-color: #EEE;padding-bottom: 8%;" >
+        <div>
+        <img src="./NESTREE_files/05partners/PARTNERS.png" style="margin-top: 3%;">
+        </div>
+        <div style="margin-top: 5%;">
+          <img src="./NESTREE_files/pc_partners.png">
+        </div>
+      </div>
+        
+      </div>
+   
+
+
+    <div id="tablet">
+      <main>
+        <h1 class="visually-hidden">Headers examples</h1>
+      
+        <div class="container">
+          <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" ><img src="./NESTREE_files/nestree-logo.png" width="70%">
+            </a>
+            <ul class="nav">
+              <li class="nav-item"><a href="#TABLET_HOME" class="nav-link" style="color: black;"><strong>HOME</strong></a></li>
+              <li class="nav-item"><a href="#TABLET_SERVICE" class="nav-link" style="color: black;"><strong>SERVICE</strong></a></li>
+              <li class="nav-item"><a href="#TABLET_PORT" class="nav-link" style="color: black;"><strong>PORTFOLIO</strong></a></li>
+              <li class="nav-item"><a href="#TABLET_PROCESS" class="nav-link" style="color: black;"><strong>PROCESS</strong></a></li>
+            </ul>
+          </header>
+        </div>
+      </main>
+  
+      <svg width="100%" height="1084">
+          <rect width="100%" height="100%" fill="#eee"/>
+          <text x="50%" y="50%" fill="#aaa">영상 또는 메인 이미지 </text>
+      </svg>
+  
+      <div id="TABLET_SERVICE" style="background-color: white;">
+        <img src="./NESTREE_files/service/SERVICE.png" style="margin-top: 8%;">
+        <div style="margin-top: 2%;">
+          <b>네스트리</b>는 최적화된 프로세스로 메타버스 가상공간을 디자인하며 디자인/기획/개발
+        </div>
+        <div>각 분야의 전문인력으로 구성하여 <strong>최상의 솔루션</strong>을 제공합니다</div>
+        <div class="row featurette" style="margin-top: 5%; margin-bottom: 8%;">
+          <div class="parent">
+            <div id="box" style="display: inline-block; height: 60%;width: 30%;padding-top: 3%;">
+              <img src="./NESTREE_files/service/branding.png" style="height: 100px;">
+              <div style="margin-top: 5%;">
+              <span style="margin-top: 5%;">메타버스 브랜딩은 <br><b style="color: #0257a3;">차별화</b>가 필요합니다.</span><br>
+              <span style="margin-top: 2%;">네스트리 브랜드에 새로운 세계관을 <br>부여함으로써
+              가상공간에서 <br>고객사의 <b style="color: #0257a3;">가치를 증명</b>합니다.</span>
+              </div>
+            </div>
+            <div id="box" style="display: inline-block; height: 60%;width: 30%;margin-left: 3%;margin-right: 3%;padding-top: 3%;";>
+              <img src="./NESTREE_files/service/design.png" style="height: 100px;">
+              <div style="margin-top: 5%;">
+              <span style="margin-top: 5%;">다양한 분야의 전문가들의</span><br>
+              <span style="margin-top: 2%;"><b style="color: #0257a3;">다양한 플렛폼</b>을 활용하여 <br>2D/2.5D/3D 공간을 <br>높은
+              퀄리티로 구축합니다.</span>
+            </div>
+            </div>
+            <div id="box" style="display: inline-block; height: 60%;width: 30%;padding-top: 3%;">
+              <img src="./NESTREE_files/service/solutions.png" style="height: 100px; ">
+              <div style="margin-top: 5%;">
+              <span style="margin-top: 5%;">수많은 경험을 바탕으로 <br>사용자가
+              메타버스 콘텐츠 및 가상공간을<br> 경험할 수
+              있도록<br> <b style="color: #0257a3;">알맞은 방향</b>을 제시합니다.</span>
+            </div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+          <div id="TABLET_PORT" style="background-color: #EEE;padding-bottom: 8%;">
+            <div>
+              <img src="./NESTREE_files/03portfolio/PORTFOLIO.png" style="margin-top: 8%;">
+            </div>
+            <a href="#" style="color: black;">
+              <div id="box" style="display: inline-block; width: 35%;margin-right: 5%;">
+              <img class="img" src="./NESTREE_files/Kvillage 가로 배너_221102.jpg" alt="">
+              <h1 class="heading">K Village</h1>
+              <p class="texts">
+                Kvillage_한국 대형 연예기획사인 <br>큐브엔터테인먼트의 소유 공간입니다.
+              </p>
+              </div>
+            </a>
+            <a href="#" style="color: black;">
+              <div id="box" style="display: inline-block; width: 35%;margin-left: 5%;">
+                <img class="img" src="./NESTREE_files/XP가로배너.jpg" alt="">
+                <h1 class="heading">Anicube</h1>
+                <p class="texts">
+                  '뮤직 메타버스'라는 테마를 가지고 K-POP의 <br>다양한 공연과 프로모션들이 진행됩니다.
+                </p>
+              </div>
+            </a>
+          </div>
+
+        <div id="TABLET_PROCESS" style="padding-bottom: 8%;margin-top: 3%;">
+          <div>
+            <img src="./NESTREE_files/04process/PROCESS.png" style="margin-top: 8%;">
+          </div>
+          <div style="margin-top: 5%;">
+          <img class="img-shadow" src="./NESTREE_files/04process/Group 4.png"  width="25%;">
+          <img class="img-shadow" src="./NESTREE_files/04process/Group 5.png" width="25%;">
+          <img class="img-shadow" src="./NESTREE_files/04process/Group 6.png" width="25%;">
+          </div>
+        </div>
+        <div id="5" style="background-color: #EEE;padding-bottom: 8%;" >
+          <div>
+          <img src="./NESTREE_files/05partners/PARTNERS.png" style="margin-top: 3%;">
+          </div>
+          <div style="margin-top: 10%;">
+            <img src="./NESTREE_files/tablet_partners.png" width="70%">
+          </div>
+        </div>
+    </div>
+
+    <div id="mobile" style="padding-top: 75px;">
+      <main>      
+        <div class="container_m" style="z-index: 1;">
+          
+          <h1><a href="#"><img src="./NESTREE_files/nestree-logo.png" width="50%"></h1></a>
+        </div>
+      </main>
+  <div class="body_m">
+      <svg width="100%" height="300">
+          <rect width="100%" height="100%" fill="#eee"/>
+          <text x="50%" y="50%" fill="#aaa">영상 또는 이미지</text>
+      </svg>
+  
+      <div id="2" style="background-color: white;font-size: 15px;">
+        <img src="./NESTREE_files/service/SERVICE.png" width="25%" style="margin-top: 8%;">
+        
+        <div style="margin-top: 5%;">
+          <b>네스트리</b>는 최적화된 프로세스로 <br>메타버스 가상공간을 디자인하며 <br>디자인/기획/개발
+        </div>
+        <div>각 분야의 전문인력으로 구성하여 <br><strong>최상의 솔루션</strong>을 제공합니다</div>
+        <div>
+          <div style="font-size: 12px;padding-bottom: 8%;">
+            <div style="margin-top: 10%;">
+              <img src="./NESTREE_files/service/branding.png" style="height: 100px;">
+              <div style="margin-top: 5%;">
+              <span style="margin-top: 5%;">메타버스 브랜딩은 <br><b style="color: #0257a3;">차별화</b>가 필요합니다.</span><br>
+              <span style="margin-top: 2%;">네스트리 브랜드에 새로운 세계관을 <br>부여함으로써
+              가상공간에서 <br>고객사의 <b style="color: #0257a3;">가치를 증명</b>합니다.</span>
+              </div>
+            </div>
+            <div style="margin-top: 10%;">
+              <img src="./NESTREE_files/service/design.png" style="height: 100px;">
+              <div style="margin-top: 5%;">
+              <span style="margin-top: 5%;">다양한 분야의 전문가들의</span><br>
+              <span style="margin-top: 2%;"><b style="color: #0257a3;">다양한 플렛폼</b>을 활용하여 <br>2D/2.5D/3D 공간을 <br>높은
+              퀄리티로 구축합니다.</span>
+            </div>
+            </div>
+            <div style="margin-top: 10%;">
+              <img src="./NESTREE_files/service/solutions.png" style="height: 100px; ">
+              <div style="margin-top: 5%;">
+              <span style="margin-top: 5%;">수많은 경험을 바탕으로 <br>사용자가
+              메타버스 콘텐츠 및 가상공간을<br> 경험할 수
+              있도록<br> <b style="color: #0257a3;">알맞은 방향</b>을 제시합니다.</span>
+            </div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+          <div id="3" style="background-color: #EEE;padding-bottom: 8%;">
+            <div>
+              <img src="./NESTREE_files/03portfolio/PORTFOLIO.png" width="35%" style="margin-top: 8%;">
+            </div>
+            <div class="m_slideshow-container" style="margin-top: 5%;">
+              <div class="m_mySlides m_fade">
+                <a href="naver.com"><img src="./NESTREE_files/Kvillage.png" style="width:80%"></a>
+              </div>
+              
+              <div class="m_mySlides m_fade">
+                <img src="./NESTREE_files/Anicube.png" style="width:80%">
+              </div>
+              
+            
+              <!-- 이전/다음 버튼 -->
+              <a class="m_prev" onclick="m_plusSlides(-1)">&#10094;</a>
+              <a class="m_next" onclick="m_plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- 하단 이미지 슬라이드 네비게이션 버튼 -->
+            <div style="text-align:center">
+              <span class="m_dot"></span> 
+              <span class="m_dot"></span> 
+            </div>
+          </div>
+
+        <div id="4" style="padding-bottom: 8%;margin-top: 3%;">
+          <div>
+            <img src="./NESTREE_files/04process/PROCESS.png" width="30%" style="margin-top: 8%;">
+          </div>
+          <div style="margin-top: 5%;">
+          <img class="img-shadow" src="./NESTREE_files/04process/Group 4.png"  width="60%;">
+          <img class="img-shadow" src="./NESTREE_files/04process/Group 5.png" width="60%;">
+          <img class="img-shadow" src="./NESTREE_files/04process/Group 6.png" width="60%;">
+          </div>
+        </div>
+        <div id="5" style="background-color: #EEE;padding-bottom: 8%;" >
+          <div>
+          <img src="./NESTREE_files/05partners/PARTNERS.png" width="30%" style="margin-top: 10%;">
+          </div>
+          <div style="margin-top: 10%;">
+            <img src="./NESTREE_files/tablet_partners.png" width="90%">
+          </div>
+        </div>
+    </div>
+    </div>
+
+      <script>
+      const images = [  
+        {    src: "/NESTREE_files/Kvillage.png",    link: "https://example.com/Kvillage"  },  
+        {    src: "/NESTREE_files/Anicube.png",    link: "https://example.com/Anicube"  },  
+        {    src: "/NESTREE_files/Kvillage.png",    link: "https://example.com/Kvillage"  }, 
+        {    src: "/NESTREE_files/Anicube.png",    link: "https://example.com/Anicube"  }
+      ];
+
+const prevImage = document.querySelector(".prev-image");
+const currentImage = document.querySelector(".current-image");
+const nextImage = document.querySelector(".next-image");
+const prevButton = document.querySelector(".prev-button");
+const nextButton = document.querySelector(".next-button");
+let currentIndex = 1;
+let intervalId;
+
+function changeImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  prevImage.src = images[(currentIndex - 1 + images.length) % images.length].src;
+  prevImage.parentNode.href = images[(currentIndex - 1 + images.length) % images.length].link;
+  currentImage.src = images[currentIndex].src;
+  currentImage.parentNode.href = images[currentIndex].link;
+  nextImage.src = images[(currentIndex + 1) % images.length].src;
+  nextImage.parentNode.href = images[(currentIndex + 1) % images.length].link;
+}
+
+prevButton.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  prevImage.src = images[(currentIndex - 1 + images.length) % images.length].src;
+  prevImage.parentNode.href = images[(currentIndex - 1 + images.length) % images.length].link;
+  currentImage.src = images[currentIndex].src;
+  currentImage.parentNode.href = images[currentIndex].link;
+  nextImage.src = images[(currentIndex + 1) % images.length].src;
+  nextImage.parentNode.href = images[(currentIndex + 1) % images.length].link;
+});
+
+nextButton.addEventListener("click", changeImage);
+
+intervalId = setInterval(changeImage, 3000);
+
+
+var slideIndex = 1;
+    m_showSlides(slideIndex);
+
+// Next/previous controls
+function m_plusSlides(n) {
+    m_showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    m_showSlides(slideIndex = n);
+}
+
+function m_showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("m_mySlides");
+  var dots = document.getElementsByClassName("m_dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  m_dots[slideIndex-1].className += " active";
+}
+    </script>
+  </body>
+</html>
